@@ -158,9 +158,7 @@
 
 	// Workbench
 	"workbench.colorCustomizations": {},
-	"workbench.colorTheme": "Darker than One Dark Pro",
 	"workbench.preferredDarkColorTheme": "Darker than One Dark Pro",
-	"workbench.iconTheme": "material-icon-theme",
 	"workbench.editor.enablePreview": false,
 	"workbench.editor.labelFormat": "default",
 	"workbench.startupEditor": "none",
@@ -236,5 +234,8 @@
 	"workbench.editor.showIcons": true, // removes icon from opened files in tabs
 	"workbench.editor.tabCloseButton": "right", // removes cross icon from tabs
 	"workbench.statusBar.visible": true, // removes the status bar (the bar at the bottom of the screen)
-	"workbench.layoutControl.type": "toggles" // removes the layout button from the status bar
+	"workbench.layoutControl.type": "toggles", // removes the layout button from the status bar
+
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.colorTheme": "Darker than One Dark Pro"
 }
