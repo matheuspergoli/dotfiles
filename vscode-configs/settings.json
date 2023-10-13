@@ -157,7 +157,9 @@
 	"editor.guides.bracketPairsHorizontal": true,
 
 	// Workbench
-	"workbench.colorCustomizations": {},
+	"workbench.colorCustomizations": {
+		"tree.indentGuidesStroke": "#ffffff3a"
+	},
 	"workbench.preferredDarkColorTheme": "Darker than One Dark Pro",
 	"workbench.editor.enablePreview": false,
 	"workbench.editor.labelFormat": "default",
@@ -223,7 +225,7 @@
 	"window.menuBarVisibility": "toggle", // alt key to show
 	"workbench.editor.showTabs": true, // removes tabs
 	"workbench.layoutControl.enabled": false, // removes the layout control button (the one that looks like a grid)
-	"workbench.tree.renderIndentGuides": "none", // removes indent guides
+	"workbench.tree.renderIndentGuides": "always", // removes indent guides
 	"editor.renderWhitespace": "none", // removes whitespace chars
 	"editor.overviewRulerBorder": false, // removes border from overview ruler (located on the right, same position as the scrollbar)
 	"editor.hideCursorInOverviewRuler": true, // hides cursor mark in the overview ruler
@@ -234,8 +236,13 @@
 	"workbench.editor.showIcons": true, // removes icon from opened files in tabs
 	"workbench.editor.tabCloseButton": "right", // removes cross icon from tabs
 	"workbench.statusBar.visible": true, // removes the status bar (the bar at the bottom of the screen)
-	"workbench.layoutControl.type": "toggles", // removes the layout button from the status bar
-
-	"workbench.iconTheme": "material-icon-theme",
-	"workbench.colorTheme": "Darker than One Dark Pro"
+	"workbench.layoutControl.type": "toggles",
+	"workbench.iconTheme": "symbols",
+	"workbench.colorTheme": "Darker than One Dark Pro",
+	"editor.tokenColorCustomizations": {
+		"textMateRules": []
+	},
+	"material-icon-theme.activeIconPack": "react",
+	"workbench.tree.indent": 20,
+	"symbols.hidesExplorerArrows": true
 }
