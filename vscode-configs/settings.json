@@ -44,7 +44,7 @@
 	"editor.cursorWidth": 2,
 	"editor.fontLigatures": true,
 	"editor.fontFamily": "JetBrainsMono Nerd Font",
-	"editor.fontSize": 14,
+	"editor.fontSize": 13,
 	"editor.autoClosingBrackets": "always",
 	"editor.cursorBlinking": "smooth",
 	"editor.minimap.enabled": false,
@@ -57,7 +57,7 @@
 	},
 
 	// Terminal
-	"terminal.integrated.fontSize": 14,
+	"terminal.integrated.fontSize": 13,
 	"terminal.integrated.scrollback": 1000,
 	"terminal.integrated.cursorWidth": 2,
 	"terminal.integrated.letterSpacing": 1,
@@ -237,12 +237,8 @@
 	"workbench.editor.tabCloseButton": "right", // removes cross icon from tabs
 	"workbench.statusBar.visible": true, // removes the status bar (the bar at the bottom of the screen)
 	"workbench.layoutControl.type": "toggles",
-	"workbench.iconTheme": "symbols",
-	"workbench.colorTheme": "Darker than One Dark Pro",
-	"editor.tokenColorCustomizations": {
-		"textMateRules": []
-	},
+	"workbench.iconTheme": "material-icon-theme",
 	"material-icon-theme.activeIconPack": "react",
-	"workbench.tree.indent": 20,
-	"symbols.hidesExplorerArrows": true
+	"workbench.tree.indent": 15,
+	"workbench.colorTheme": "Darker than One Dark Pro"
 }
