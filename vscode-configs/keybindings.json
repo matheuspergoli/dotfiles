@@ -28,5 +28,27 @@
 		"key": "ctrl+shift+n",
 		"command": "explorer.newFolder",
 		"when": "explorerViewletFocus"
+	},
+	{
+		"key": "ctrl+shift+e",
+		"command": "workbench.view.explorer"
+	},
+	{
+		"key": "ctrl+shift+x",
+		"command": "workbench.view.extensions",
+		"when": "!extensionEditor:searchFocus"
+	},
+	{
+		"key": "ctrl+tab",
+		"command": "workbench.action.nextEditor"
+	},
+	{
+		"key": "ctrl+shift+tab",
+		"command": "workbench.action.previousEditor"
+	},
+	{
+		"key": "ctrl+l",
+		"command": "expandLineSelection",
+		"when": "textInputFocus"
 	}
 ]

@@ -75,7 +75,7 @@
 
 	// Live Server
 	"liveServer.settings.donotShowInfoMsg": true,
-	"liveServer.settings.CustomBrowser": "chrome",
+	"liveServer.settings.CustomBrowser": "firefox",
 
 	// Diff Editor
 	"diffEditor.ignoreTrimWhitespace": false,
@@ -223,7 +223,7 @@
 
 	"window.title": " ", // ${dirty}${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}${appName}
 	"window.menuBarVisibility": "toggle", // alt key to show
-	"workbench.editor.showTabs": true, // removes tabs
+	"workbench.editor.showTabs": "multiple", // removes tabs
 	"workbench.layoutControl.enabled": false, // removes the layout control button (the one that looks like a grid)
 	"workbench.tree.renderIndentGuides": "always", // removes indent guides
 	"editor.renderWhitespace": "none", // removes whitespace chars
@@ -231,14 +231,49 @@
 	"editor.hideCursorInOverviewRuler": true, // hides cursor mark in the overview ruler
 	"editor.folding": true, // removes the folding feature
 	"editor.occurrencesHighlight": false, // removes highlights occurrences (still works when you select a word)
-	"editor.glyphMargin": false, // removes the space used mainly for debugging indicators
-	"workbench.activityBar.visible": false, // removes the activity bar (the 4 icons at the left of the screen)
+	"editor.glyphMargin": false, // removes the activity bar (the 4 icons at the left of the screen)
 	"workbench.editor.showIcons": true, // removes icon from opened files in tabs
 	"workbench.editor.tabCloseButton": "right", // removes cross icon from tabs
 	"workbench.statusBar.visible": true, // removes the status bar (the bar at the bottom of the screen)
 	"workbench.layoutControl.type": "toggles",
-	"workbench.iconTheme": "material-icon-theme",
-	"material-icon-theme.activeIconPack": "react",
+	"workbench.iconTheme": "symbols",
 	"workbench.tree.indent": 15,
-	"workbench.colorTheme": "Darker than One Dark Pro"
+	"symbols.files.associations": {
+		"*.module.ts": "ts",
+		"*.guard.ts": "ts"
+	},
+	"symbols.folders.associations": {
+		".next": "folder",
+		"node_modules": "folder",
+		"prisma": "folder",
+		"public": "folder",
+		"src": "folder",
+		"pages": "folder",
+		"styles": "folder",
+		"components": "folder",
+		"hooks": "folder",
+		"middlewares": "folder",
+		"middleware": "folder",
+		"app": "folder",
+		"context": "folder",
+		"types": "folder",
+		"api": "folder",
+		"utils": "folder",
+		"config": "folder",
+		"database": "folder",
+		".vscode": "folder",
+		"dist": "folder",
+		"layout": "folder",
+		"assets": "folder",
+		"server": "folder",
+		"static": "folder",
+		"scripts": "folder",
+		"client": "folder",
+		"build": "folder",
+		"css": "folder",
+		"js": "folder"
+	},
+	"symbols.hidesExplorerArrows": false,
+	"workbench.colorTheme": "Darker than One Dark Pro",
+	"workbench.activityBar.location": "hidden"
 }
