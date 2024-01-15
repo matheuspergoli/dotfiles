@@ -30,6 +30,7 @@
 	"editor.wordWrapColumn": 160,
 	"editor.rulers": [], // 160
 	"editor.codeLens": true,
+	"editor.semanticHighlighting.enabled": false,
 	"editor.accessibilitySupport": "off",
 	"editor.linkedEditing": true,
 	"editor.lineHeight": 20,
@@ -45,6 +46,8 @@
 	"editor.fontLigatures": true,
 	"editor.fontFamily": "JetBrainsMono Nerd Font",
 	"editor.fontSize": 13,
+	// "editor.scrollbar.vertical": "hidden",
+	// "editor.scrollbar.horizontal": "hidden",
 	"editor.autoClosingBrackets": "always",
 	"editor.cursorBlinking": "smooth",
 	"editor.minimap.enabled": false,
@@ -52,8 +55,8 @@
 	"editor.suggestSelection": "first",
 	"editor.suggestFontSize": 16,
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true,
-		"source.organizeImports": true
+		"source.fixAll.eslint": "explicit",
+		"source.organizeImports": "explicit"
 	},
 
 	// Terminal
@@ -135,9 +138,6 @@
 	"css.enabledLanguages": ["typescriptreact", "react", "html"],
 	"css.lint.unknownAtRules": "ignore",
 
-	// Path Intellisense
-	"path-intellisense.autoTriggerNextSuggestion": true,
-
 	// NPM IntelliSense
 	"npm-intellisense.importLinebreak": "",
 	"npm-intellisense.scanDevDependencies": true,
@@ -173,7 +173,7 @@
 		"*": true,
 		"plaintext": true,
 		"markdown": true,
-		"scminput": false,
+		"scminput": true,
 		"yaml": true,
 		"javascript": true,
 		"typescript": true,
@@ -221,8 +221,7 @@
 		"strings": "on"
 	},
 
-	"window.title": " ", // ${dirty}${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}${appName}
-	"window.menuBarVisibility": "toggle", // alt key to show
+	"window.title": " ", // alt key to show
 	"workbench.editor.showTabs": "multiple", // removes tabs
 	"workbench.layoutControl.enabled": false, // removes the layout control button (the one that looks like a grid)
 	"workbench.tree.renderIndentGuides": "always", // removes indent guides
@@ -230,18 +229,29 @@
 	"editor.overviewRulerBorder": false, // removes border from overview ruler (located on the right, same position as the scrollbar)
 	"editor.hideCursorInOverviewRuler": true, // hides cursor mark in the overview ruler
 	"editor.folding": true, // removes the folding feature
-	"editor.occurrencesHighlight": false, // removes highlights occurrences (still works when you select a word)
+	"editor.occurrencesHighlight": "off", // removes highlights occurrences (still works when you select a word)
 	"editor.glyphMargin": false, // removes the activity bar (the 4 icons at the left of the screen)
 	"workbench.editor.showIcons": true, // removes icon from opened files in tabs
-	"workbench.editor.tabCloseButton": "right", // removes cross icon from tabs
-	"workbench.statusBar.visible": true, // removes the status bar (the bar at the bottom of the screen)
+	"workbench.statusBar.visible": false, // removes the status bar (the bar at the bottom of the screen)
 	"workbench.layoutControl.type": "toggles",
 	"workbench.iconTheme": "symbols",
+	"window.commandCenter": false,
+	"window.menuBarVisibility": "hidden",
 	"workbench.tree.indent": 15,
+	"workbench.editor.tabActionCloseVisibility": true, // removes the x for closing tabs
+	"workbench.editor.tabActionUnpinVisibility": false, // remove the search bar at the center of the screen
+	"workbench.editor.editorActionsLocation": "hidden", // removes the 3 dots at the top right of the screen
 	"symbols.files.associations": {
 		"*.module.ts": "ts",
 		"*.guard.ts": "ts"
 	},
+	"symbols.hidesExplorerArrows": false,
+	"workbench.sideBar.location": "left",
+	"workbench.colorTheme": "Darker than One Dark Pro",
+	"workbench.activityBar.location": "hidden",
+	"workbench.editor.tabActionLocation": "right",
+	"remote.autoForwardPortsSource": "hybrid",
+	"editor.quickSuggestionsDelay": 1,
 	"symbols.folders.associations": {
 		".next": "folder",
 		"node_modules": "folder",
@@ -272,8 +282,5 @@
 		"build": "folder",
 		"css": "folder",
 		"js": "folder"
-	},
-	"symbols.hidesExplorerArrows": false,
-	"workbench.colorTheme": "Darker than One Dark Pro",
-	"workbench.activityBar.location": "hidden"
+	}
 }

@@ -6,16 +6,6 @@
 		"when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
 	},
 	{
-		"key": "shift+alt+f",
-		"command": "-editor.action.formatDocument",
-		"when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-	},
-	{
-		"key": "ctrl+alt+t",
-		"command": "-headwind.sortTailwindClasses",
-		"when": "editorFocus"
-	},
-	{
 		"key": "ctrl+shift+9",
 		"command": "workbench.files.action.collapseExplorerFolders"
 	},
