@@ -254,6 +254,7 @@
   "editor.quickSuggestionsDelay": 1,
   "symbols.folders.associations": {
     ".next": "folder",
+    "firebase": "folder",
     "node_modules": "folder",
     "prisma": "folder",
     "public": "folder",
