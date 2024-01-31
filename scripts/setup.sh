@@ -1,5 +1,8 @@
 # Atualizando o sistema e instalando os pacotes necessários
-sudo pacman -Syu &&
+sudo pacman-key --init &&
+sudo pacman-key --populate &&
+sudo pacman -Sy archlinux-keyring &&
+sudo pacman -Su &&
 sudo pacman -S git base-devel curl tmux neovim zsh docker docker-compose unzip neofetch &&
 
 # Configurando o docker
@@ -27,4 +30,5 @@ nvm install node && corepack enable && corepack enable pnpm &&
 
 rm -rf ~/.dotfiles &&
 source ~/.zshrc &&
-source ~/.config/tmux/tmux.conf &&
+
+echo "Zap"
