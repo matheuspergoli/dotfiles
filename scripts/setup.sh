@@ -9,8 +9,7 @@ rm -rf /etc/pacman.d/gnupg &&
 pacman-key --init &&
 pacman-key --populate &&
 yes | pacman -Sy archlinux-keyring &&
-yes | pacman -Su &&
-yes | pacman -Syyu &&
+pacman -Su &&
 
 # Configurando sudoers file
 echo "%wheel ALL=(ALL) ALL" > /etc/sudoers.d/wheel &&
