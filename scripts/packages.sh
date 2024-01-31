@@ -1,8 +1,10 @@
+#!/bin/bash
+
 # Instalando pacotes iniciais
 sudo pacman -S git base-devel curl tmux neovim zsh docker docker-compose unzip neofetch &&
 
 # Configurando o docker
-sudo groupadd docker &&
+# sudo groupadd docker &&
 sudo usermod -aG docker $USER && newgrp docker &&
 sudo systemctl enable docker.service &&
 sudo systemctl start docker.service &&

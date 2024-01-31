@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Apagando arquivos do pacman e gnupg para evitar erros de chave pública inválida
 rm -rf ~/.gnupg &&
 rm -rf /var/cache/pacman &&
