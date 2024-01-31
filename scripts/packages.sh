@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Instalando pacotes iniciais
-sudo pacman -S git base-devel curl tmux neovim zsh docker docker-compose unzip neofetch &&
+yes | sudo pacman -S git base-devel curl tmux neovim zsh docker docker-compose unzip neofetch &&
 
 # Configurando o docker
-# sudo groupadd docker &&
+sudo groupadd docker &&
 sudo usermod -aG docker $USER && newgrp docker &&
 sudo systemctl enable docker.service &&
 sudo systemctl start docker.service &&
@@ -23,7 +23,7 @@ git clone https://github.com/matheuspergoli/dotfiles.git ~/.dotfiles && mkdir ~/
 # Instalando tpm
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm &&
 
-source ~/.zshrc &&
+source ~/.bashrc &&
 
 # Configurando node e instalando pnpm
 nvm install node && corepack enable && corepack enable pnpm &&
