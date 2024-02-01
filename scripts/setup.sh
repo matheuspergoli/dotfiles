@@ -20,4 +20,4 @@ useradd -m -G wheel -s /bin/bash heizmen &&
 # Definindo senha
 passwd heizmen &&
 
-echo "Zap"
+echo "SETUP FINALIZADO!!!"

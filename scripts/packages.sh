@@ -18,7 +18,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash &&
 
 # Clonando meus dotfiles e configurando nvim/tmux e zsh
-git clone https://github.com/matheuspergoli/dotfiles.git ~/.dotfiles && mkdir ~/.config && cp -r ~/.dotfiles/.config/** ~/.config && cp -r ~/.dotfiles/.zshrc ~/.zshrc &&
+git clone https://github.com/matheuspergoli/dotfiles.git ~/.dotfiles && mkdir ~/.config && cp -r ~/.dotfiles/.config/** ~/.config && cp -r ~/.dotfiles/.zshrc ~/.zshrc && mv ~/.dotfiles/.gitconfig ~/  &&
 
 # Instalando tpm
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm &&
@@ -30,4 +30,4 @@ nvm install node && corepack enable && corepack enable pnpm &&
 
 rm -rf ~/.dotfiles &&
 
-echo "Zap"
+echo "SETUP FINALIZADO!!!"
