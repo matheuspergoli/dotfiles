@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Instalando pacotes iniciais
-yes | sudo pacman -S git base-devel curl tmux neovim zsh docker docker-compose unzip neofetch &&
+yes | sudo pacman -S git base-devel curl tmux neovim zsh openssh docker docker-compose unzip neofetch &&
 
 # Configurando o docker
 # sudo groupadd docker &&
@@ -17,7 +17,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 # Instalando nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash &&
 
-# Clonando meus dotfiles e configurando nvim/tmux e zsh
+# Clonando dotfiles e configurando nvim/git-config/tmux/zsh
 git clone https://github.com/matheuspergoli/dotfiles.git ~/.dotfiles && mkdir ~/.config && cp -r ~/.dotfiles/.config/** ~/.config && cp -r ~/.dotfiles/.zshrc ~/.zshrc && mv ~/.dotfiles/.gitconfig ~/  &&
 
 # Instalando tpm
