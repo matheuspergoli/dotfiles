@@ -48,6 +48,7 @@ M.nvimtree = {
 
 	view = {
 		adaptive_size = true,
+		relativenumber = false,
 	},
 
 	renderer = {

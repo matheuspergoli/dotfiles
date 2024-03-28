@@ -9,6 +9,7 @@ for _, lsp in ipairs(servers) do
 	local config = {
 		on_attach = on_attach,
 		capabilities = capabilities,
+		semanticTokens = true,
 	}
 
 	if lsp == "tailwindcss" then
