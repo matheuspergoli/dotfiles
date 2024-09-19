@@ -21,7 +21,7 @@ map({ "n" }, "<C-k>", "<cmd> TmuxNavigateUp<CR>", { desc = "window up" })
 -- Harpoon
 map({ "n" }, "<leader>a", function()
   local harpoon = require "harpoon"
-  harpoon:list():append()
+  harpoon:list():add()
 end, { desc = "Add current file to harpoon" })
 map({ "n" }, "<leader>h", function()
   local harpoon = require "harpoon"

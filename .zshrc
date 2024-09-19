@@ -100,6 +100,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias create-trpc='pnpm dlx create-next-app@latest --example https://github.com/matheuspergoli/next-template-trpc'
+alias create-next='pnpm dlx create-next-app@latest --example https://github.com/matheuspergoli/next-template'
+alias lg='lazygit'

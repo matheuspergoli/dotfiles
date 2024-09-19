@@ -1,13 +1,17 @@
 return {
   {
-    "christoomey/vim-tmux-navigator",
+    "github/copilot.vim",
     lazy = false,
   },
 
-  -- {
-  --   "github/copilot.vim",
-  --   lazy = false,
-  -- },
+  {
+    "editorconfig/editorconfig-vim",
+  },
+
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
 
   {
     "ThePrimeagen/harpoon",
@@ -30,6 +34,28 @@ return {
   },
 
   {
+    "nvim-telescope/telescope.nvim",
+    opts = function()
+      local conf = require "nvchad.configs.telescope"
+
+      conf.defaults.file_ignore_patterns = {
+        "dist",
+        "node_modules",
+        "target",
+        ".git",
+        "build",
+        "lib/",
+        ".next",
+        "package%-lock.json",
+        "pnpm%-lock.yaml",
+        "ios",
+        "android",
+        ".expo",
+      }
+    end,
+  },
+
+  {
     "windwp/nvim-ts-autotag",
     ft = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
     config = function()
@@ -40,15 +66,12 @@ return {
   {
     "stevearc/conform.nvim",
     event = "BufWritePre",
-    config = function()
-      require "configs.conform"
-    end,
+    opts = require "configs.conform",
   },
 
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
     end,
   },
@@ -57,19 +80,20 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "lua-language-server",
         "stylua",
-
-        "css-lsp",
-        "html-lsp",
-        "eslint-lsp",
         "prettierd",
-        "tailwindcss-language-server",
-        "typescript-language-server",
 
-        "prisma-language-server",
-
-        "rust-analyzer",
+        -- LSPs
+        "gopls", -- gopls
+        "css-lsp", -- cssls
+        "html-lsp", -- html
+        "eslint-lsp", -- eslint
+        "lua-language-server", -- lua_ls
+        "rust-analyzer", -- rust_analyzer
+        "prisma-language-server", -- prismals
+        "typescript-language-server", -- tsserver
+        "tailwindcss-language-server", -- tailwindcss
+        "emmet-language-server", -- emmet_language_server
       },
     },
   },
@@ -89,11 +113,9 @@ return {
         "markdown",
         "markdown_inline",
         "rust",
+        "go",
       },
       indent = {
-        enable = true,
-      },
-      autotag = {
         enable = true,
       },
     },
