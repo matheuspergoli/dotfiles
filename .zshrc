@@ -70,7 +70,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git asdf zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,6 +99,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+eval "$(zoxide init --cmd cd zsh)"
 
 alias create-trpc='pnpm dlx create-next-app@latest --example https://github.com/matheuspergoli/next-template-trpc'
 alias create-next='pnpm dlx create-next-app@latest --example https://github.com/matheuspergoli/next-template'

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Instalando pacotes iniciais
-yes | sudo pacman -S git base-devel curl tmux neovim zsh openssh docker docker-compose unzip neofetch &&
+yes | sudo pacman -S git base-devel curl tmux neovim zsh fzf zoxide openssh docker docker-compose unzip neofetch &&
 
 # Configurando o docker
 # sudo groupadd docker &&
@@ -20,8 +20,8 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash 
 # Clonando dotfiles e configurando nvim/git-config/tmux/zsh
 git clone https://github.com/matheuspergoli/dotfiles.git ~/.dotfiles && mkdir ~/.config && cp -r ~/.dotfiles/.config/** ~/.config && cp -r ~/.dotfiles/.zshrc ~/.zshrc && mv ~/.dotfiles/.gitconfig ~/  &&
 
-# Instalando tpm
-git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm &&
+# Instalando asdf
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.1 &&
 
 source ~/.bashrc &&
 
