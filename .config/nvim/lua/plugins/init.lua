@@ -5,19 +5,8 @@ return {
   },
 
   {
-    "editorconfig/editorconfig-vim",
-  },
-
-  {
     "christoomey/vim-tmux-navigator",
     lazy = false,
-  },
-
-  {
-    "ThePrimeagen/harpoon",
-    lazy = false,
-    branch = "harpoon2",
-    dependencies = { "nvim-lua/plenary.nvim" },
   },
 
   {
@@ -46,11 +35,11 @@ return {
         "build",
         "lib/",
         ".next",
-        "package%-lock.json",
-        "pnpm%-lock.yaml",
         "ios",
         "android",
         ".expo",
+        "public",
+        ".*lock.*",
       }
     end,
   },
@@ -78,30 +67,12 @@ return {
 
   {
     "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "stylua",
-        "prettierd",
-
-        -- LSPs
-        "gopls", -- gopls
-        "css-lsp", -- cssls
-        "html-lsp", -- html
-        "eslint-lsp", -- eslint
-        "lua-language-server", -- lua_ls
-        "rust-analyzer", -- rust_analyzer
-        "prisma-language-server", -- prismals
-        "typescript-language-server", -- tsserver
-        "tailwindcss-language-server", -- tailwindcss
-        "emmet-language-server", -- emmet_language_server
-      },
-    },
   },
 
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
-      ensure_installed = {
+      pkgs = {
         "vim",
         "lua",
         "html",

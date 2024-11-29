@@ -3,24 +3,35 @@ require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
 
--- EXAMPLE
-local servers = { "ts_ls", "eslint", "prismals", "html", "lua_ls", "cssls", "rust_analyzer", "gopls" }
+local servers = {
+  "html",
+  "biome",
+  "ts_ls",
+  "cssls",
+  "gopls",
+  "lua_ls",
+  "eslint",
+  "prismals",
+  "rust_analyzer",
+  "emmet_language_server",
+}
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
-    on_attach = nvlsp.on_attach,
     on_init = nvlsp.on_init,
+    on_attach = nvlsp.on_attach,
     capabilities = nvlsp.capabilities,
   }
 end
 
 -- tailwind cva and cx class regex
 lspconfig.tailwindcss.setup {
-  on_attach = nvlsp.on_attach,
   on_init = nvlsp.on_init,
+  on_attach = nvlsp.on_attach,
   capabilities = nvlsp.capabilities,
+  root_dit = lspconfig.util.root_pattern ".git",
   settings = {
     tailwindCSS = {
       experimental = {
@@ -31,12 +42,4 @@ lspconfig.tailwindcss.setup {
       },
     },
   },
-}
-
--- emmet language server
-lspconfig.emmet_language_server.setup {
-  on_attach = nvlsp.on_attach,
-  on_init = nvlsp.on_init,
-  capabilities = nvlsp.capabilities,
-  filetypes = { "html", "css", "javascript", "javascriptreact", "typescript", "typescriptreact" },
 }
