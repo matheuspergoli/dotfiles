@@ -2,16 +2,16 @@ local options = {
   formatters_by_ft = {
     lua = { "stylua" },
 
-    javascript = { "prettierd" },
-    typescript = { "prettierd" },
-    javascriptreact = { "prettierd" },
-    typescriptreact = { "prettierd" },
+    javascript = { "biome" },
+    typescript = { "biome" },
+    javascriptreact = { "biome" },
+    typescriptreact = { "biome" },
 
-    json = { "prettierd" },
-    yaml = { "prettierd" },
+    json = { "biome" },
+    yaml = { "biome" },
 
-    css = { "prettierd" },
-    html = { "prettierd" },
+    css = { "biome" },
+    html = { "biome" },
 
     rust = { "rustfmt" },
   },

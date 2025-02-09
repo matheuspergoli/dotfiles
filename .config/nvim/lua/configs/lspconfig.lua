@@ -11,6 +11,7 @@ local servers = {
   "gopls",
   "lua_ls",
   "eslint",
+  "marksman",
   "prismals",
   "rust_analyzer",
   "emmet_language_server",
@@ -31,13 +32,13 @@ lspconfig.tailwindcss.setup {
   on_init = nvlsp.on_init,
   on_attach = nvlsp.on_attach,
   capabilities = nvlsp.capabilities,
-  root_dit = lspconfig.util.root_pattern ".git",
+  root_dir = lspconfig.util.root_pattern ".git",
   settings = {
     tailwindCSS = {
       experimental = {
         classRegex = {
-          { "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
-          { "cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+          { "cva\\(((?:[^()]|\\([^()]*\\))*)\\)", "[\"'`]?([^\"'`]+)[\"'`]?" },
+          { "cn\\(((?:[^()]|\\([^()]*\\))*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
         },
       },
     },
