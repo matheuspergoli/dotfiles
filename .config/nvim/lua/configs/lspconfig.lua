@@ -7,7 +7,6 @@ local servers = {
   "html",
   "biome",
   "ts_ls",
-  "cssls",
   "gopls",
   "lua_ls",
   "eslint",
@@ -18,7 +17,6 @@ local servers = {
 }
 local nvlsp = require "nvchad.configs.lspconfig"
 
--- lsps with default config
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_init = nvlsp.on_init,
@@ -27,18 +25,58 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- tailwind cva and cx class regex
+lspconfig.jsonls.setup {
+  on_init = nvlsp.on_init,
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+  settings = {
+    json = {
+      schemas = {
+        {
+          fileMatch = { "package.json" },
+          url = "https://json.schemastore.org/package.json",
+        },
+        {
+          fileMatch = { "tsconfig*.json" },
+          url = "https://json.schemastore.org/tsconfig.json",
+        },
+        {
+          fileMatch = {
+            ".prettierrc",
+            ".prettierrc.json",
+            "prettier.config.json",
+          },
+          url = "https://json.schemastore.org/prettierrc.json",
+        },
+        {
+          fileMatch = { ".eslintrc", ".eslintrc.json" },
+          url = "https://json.schemastore.org/eslintrc.json",
+        },
+        {
+          fileMatch = { ".babelrc", ".babelrc.json", "babel.config.json" },
+          url = "https://json.schemastore.org/babelrc.json",
+        },
+        {
+          fileMatch = { "now.json", "vercel.json" },
+          url = "https://json.schemastore.org/now.json",
+        },
+      },
+    },
+  },
+}
+
 lspconfig.tailwindcss.setup {
   on_init = nvlsp.on_init,
   on_attach = nvlsp.on_attach,
   capabilities = nvlsp.capabilities,
-  root_dir = lspconfig.util.root_pattern ".git",
   settings = {
     tailwindCSS = {
+      emmetCompletions = true,
       experimental = {
         classRegex = {
           { "cva\\(((?:[^()]|\\([^()]*\\))*)\\)", "[\"'`]?([^\"'`]+)[\"'`]?" },
           { "cn\\(((?:[^()]|\\([^()]*\\))*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+          { "Classes\\s*=\\s*computed\\(\\(\\)\\s*=>\\s*([\\s\\S]+?)\\)", "'([^']+)'" },
         },
       },
     },

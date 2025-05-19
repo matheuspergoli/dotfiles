@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -70,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git asdf zsh-autosuggestions)
+plugins=(git zsh-autosuggestions asdf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,8 +107,38 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-eval "$(zoxide init --cmd cd zsh)"
-
 alias create-trpc='pnpm dlx create-next-app@latest --example https://github.com/matheuspergoli/next-template-trpc'
 alias create-next='pnpm dlx create-next-app@latest --example https://github.com/matheuspergoli/next-template'
+alias create-vite='~/.local/bin/create-vite.sh'
+alias create-start='~/.local/bin/create-start.sh'
+alias create-monorepo='~/.local/bin/create-monorepo.sh'
 alias lg='lazygit'
+alias npm='pnpm'
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(zoxide init --cmd cd zsh)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/heizmen/www/estudos/google-cloud-sdk/path.zsh.inc' ]; then . '/home/heizmen/www/estudos/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/heizmen/www/estudos/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/heizmen/www/estudos/google-cloud-sdk/completion.zsh.inc'; fi
+
+# bun completions
+[ -s "/home/heizmen/.bun/_bun" ] && source "/home/heizmen/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# depot_tools
+export PATH="$HOME/www/estudos/depot_tools/:$PATH"
+export PATH=$HOME/.local/bin:$PATH
+. "/home/heizmen/.deno/env"
+# Turso
+export PATH="$PATH:/home/heizmen/.turso"
+
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+
+# opencode
+export PATH=/home/heizmen/.opencode/bin:$PATH
