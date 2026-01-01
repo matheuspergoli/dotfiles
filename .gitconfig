@@ -1,0 +1,11 @@
+[user]
+	name = Matheus Pergoli
+	email = matheus.pergoli2015@yahoo.com
+[core]
+	editor = nvim
+[alias]
+    s = !git status -s
+    c = !git add --all && git commit -m
+    l = !git log --pretty=format:'%C(cyan)%h %C(red)%d %s - %C(yellow)%cn, %C(green)%cr'
+[credential]
+	helper = store
