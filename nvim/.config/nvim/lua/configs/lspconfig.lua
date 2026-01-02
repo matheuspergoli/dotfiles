@@ -129,7 +129,40 @@ vim.lsp.config.tailwindcss = {
 }
 vim.lsp.enable "tailwindcss"
 
--- VTSLS (TypeScript Language Server)
+-- Prettierd
+vim.lsp.config.prettierd = {
+  cmd = { "prettierd" },
+  filetypes = {
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "jsonc",
+    "css",
+    "scss",
+    "html",
+    "yaml",
+    "markdown",
+  },
+  root_markers = {
+    ".prettierrc",
+    ".prettierrc.json",
+    ".prettierrc.js",
+    ".prettierrc.cjs",
+    ".prettierrc.mjs",
+    ".prettierrc.yaml",
+    ".prettierrc.yml",
+    "prettier.config.js",
+    "prettier.config.cjs",
+    "prettier.config.mjs",
+    "package.json",
+  },
+  default_config = base_config,
+}
+vim.lsp.enable "prettierd"
+
+-- VTSLS
 vim.lsp.config.vtsls = {
   cmd = { "vtsls", "--stdio" },
   filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
@@ -161,12 +194,3 @@ vim.lsp.config.vtsls = {
   }),
 }
 vim.lsp.enable "vtsls"
-
--- TypeScript Language Server (backup)
--- vim.lsp.config.ts_ls = {
---   cmd = { "typescript-language-server", "--stdio" },
---   filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
---   root_markers = { "package.json", "tsconfig.json", "jsconfig.json", ".git" },
---   default_config = base_config,
--- }
--- vim.lsp.enable "ts_ls"
