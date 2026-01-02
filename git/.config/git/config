@@ -1,6 +1,8 @@
 [user]
 	name = Matheus Pergoli
-	email = matheus.pergoli2015@yahoo.com
+  email = matheus.pergoli2015@yahoo.com
+[init]
+	defaultBranch = "main"
 [core]
 	editor = nvim
 [alias]
