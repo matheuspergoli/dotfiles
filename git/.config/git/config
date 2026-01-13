@@ -1,13 +1,29 @@
 [user]
 	name = Matheus Pergoli
   email = matheus.pergoli2015@yahoo.com
+
 [init]
-	defaultBranch = "main"
+  defaultBranch = "main"
+
 [core]
-	editor = nvim
+  editor = nvim
+
 [alias]
-    s = !git status -s
-    c = !git add --all && git commit -m
-    l = !git log --pretty=format:'%C(cyan)%h %C(red)%d %s - %C(yellow)%cn, %C(green)%cr'
+  s = !git status -s
+  c = !git add --all && git commit -m
+  l = !git log --pretty=format:'%C(cyan)%h %C(red)%d %s - %C(yellow)%cn, %C(green)%cr'
+
 [credential]
-	helper = store
+  helper = store
+
+[pull]
+  rebase = true
+
+[rerere]
+  enabled = true
+
+[column]
+  ui = "auto"
+
+[branch]
+	sort = "-committerdate"

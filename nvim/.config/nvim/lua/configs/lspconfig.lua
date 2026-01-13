@@ -83,6 +83,10 @@ vim.lsp.config.jsonls = {
             fileMatch = { "now.json", "vercel.json" },
             url = "https://json.schemastore.org/now.json",
           },
+          {
+            fileMatch = { "railpack*.json" },
+            url = "https://schema.railpack.com",
+          },
         },
       },
     },
@@ -112,20 +116,12 @@ vim.lsp.config.tailwindcss = {
     "typescriptreact",
   },
   root_markers = { "tailwind.config.js", "tailwind.config.cjs", "tailwind.config.mjs", "tailwind.config.ts" },
-  default_config = vim.tbl_deep_extend("force", base_config, {
-    settings = {
-      tailwindCSS = {
-        emmetCompletions = true,
-        experimental = {
-          classRegex = {
-            { "cva\\(((?:[^()]|\\([^()]*\\))*)\\)", "[\"'`]?([^\"'`]+)[\"'`]?" },
-            { "cn\\(((?:[^()]|\\([^()]*\\))*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
-            { "Classes\\s*=\\s*computed\\(\\(\\)\\s*=>\\s*([\\s\\S]+?)\\)", "'([^']+)'" },
-          },
-        },
-      },
+  settings = {
+    tailwindCSS = {
+      emmetCompletions = true,
+      classFunctions = { "clsx", "cva", "cn", "cx" },
     },
-  }),
+  },
 }
 vim.lsp.enable "tailwindcss"
 

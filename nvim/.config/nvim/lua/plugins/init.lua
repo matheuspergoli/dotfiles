@@ -1,9 +1,9 @@
 return {
-  -- { import = "nvchad.blink.lazyspec" },
-  -- {
-  --   "Saghen/blink.cmp",
-  --   opts = require "configs.blink",
-  -- },
+  { import = "nvchad.blink.lazyspec" },
+  {
+    "Saghen/blink.cmp",
+    opts = require "configs.blink",
+  },
 
   {
     "christoomey/vim-tmux-navigator",
