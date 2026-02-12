@@ -104,9 +104,9 @@ eval "$(zoxide init --cmd cd zsh)"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias ls='exa'
+alias ls='eza'
 alias cat='bat'
 alias find='fd'
 
 # opencode
-export PATH=/home/heizmen/.opencode/bin:$PATH
+export PATH="$HOME/.opencode/bin:$PATH"
