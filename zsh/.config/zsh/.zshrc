@@ -110,3 +110,10 @@ alias find='fd'
 
 # opencode
 export PATH="$HOME/.opencode/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/home/heizmen/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
