@@ -2,6 +2,7 @@ return {
   ensure_installed = {
     "vim",
     "lua",
+    "astro",
     "html",
     "css",
     "javascript",

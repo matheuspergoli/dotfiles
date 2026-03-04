@@ -40,7 +40,7 @@ vim.lsp.enable "lua_ls"
 -- Emmet Language Server
 vim.lsp.config.emmet_language_server = {
   cmd = { "emmet-language-server", "--stdio" },
-  filetypes = { "html", "css", "scss", "javascriptreact", "typescriptreact" },
+  filetypes = { "html", "css", "scss", "javascriptreact", "typescriptreact", "astro" },
   root_markers = { ".git" },
   default_config = base_config,
 }
@@ -107,6 +107,7 @@ vim.lsp.enable "prismals"
 vim.lsp.config.tailwindcss = {
   cmd = { "tailwindcss-language-server", "--stdio" },
   filetypes = {
+    "astro",
     "html",
     "css",
     "scss",
@@ -124,6 +125,26 @@ vim.lsp.config.tailwindcss = {
   },
 }
 vim.lsp.enable "tailwindcss"
+
+-- Astro Language Server
+vim.lsp.config.astro = {
+  cmd = { "astro-ls", "--stdio" },
+  filetypes = { "astro" },
+  root_markers = {
+    "astro.config.mjs",
+    "astro.config.js",
+    "astro.config.ts",
+    "package.json",
+    "tsconfig.json",
+    "jsconfig.json",
+    ".git",
+  },
+  init_options = {
+    typescript = {},
+  },
+  default_config = base_config,
+}
+vim.lsp.enable "astro"
 
 -- VTSLS
 vim.lsp.config.vtsls = {
