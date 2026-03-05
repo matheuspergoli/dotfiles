@@ -23,6 +23,7 @@ return {
     json = { "biome-check", "prettierd", stop_after_first = true },
     jsonc = { "biome-check", "prettierd", stop_after_first = true },
 
+    mdx = { "biome-check", "prettier", stop_after_first = true },
     css = { "biome-check", "prettierd", stop_after_first = true },
     scss = { "biome-check", "prettierd", stop_after_first = true },
     html = { "biome-check", "prettierd", stop_after_first = true },

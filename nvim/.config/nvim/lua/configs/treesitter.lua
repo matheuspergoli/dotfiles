@@ -3,6 +3,8 @@ return {
     "vim",
     "lua",
     "astro",
+    "markdown",
+    "markdown_inline",
     "html",
     "css",
     "javascript",

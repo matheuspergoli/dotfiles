@@ -40,7 +40,7 @@ vim.lsp.enable "lua_ls"
 -- Emmet Language Server
 vim.lsp.config.emmet_language_server = {
   cmd = { "emmet-language-server", "--stdio" },
-  filetypes = { "html", "css", "scss", "javascriptreact", "typescriptreact", "astro" },
+  filetypes = { "html", "css", "scss", "javascriptreact", "typescriptreact", "astro", "mdx" },
   root_markers = { ".git" },
   default_config = base_config,
 }
@@ -108,6 +108,7 @@ vim.lsp.config.tailwindcss = {
   cmd = { "tailwindcss-language-server", "--stdio" },
   filetypes = {
     "astro",
+    "mdx",
     "html",
     "css",
     "scss",

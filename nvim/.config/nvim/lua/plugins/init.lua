@@ -45,10 +45,16 @@ return {
 
   {
     "windwp/nvim-ts-autotag",
-    ft = { "astro", "javascript", "javascriptreact", "typescript", "typescriptreact" },
+    ft = { "astro", "mdx", "javascript", "javascriptreact", "typescript", "typescriptreact" },
     config = function()
       require("nvim-ts-autotag").setup()
     end,
+  },
+
+  {
+    "davidmh/mdx.nvim",
+    lazy = false,
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
   },
 
   {
