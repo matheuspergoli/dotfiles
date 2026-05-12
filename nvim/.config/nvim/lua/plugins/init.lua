@@ -45,7 +45,7 @@ return {
 
   {
     "windwp/nvim-ts-autotag",
-    ft = { "astro", "mdx", "javascript", "javascriptreact", "typescript", "typescriptreact" },
+    ft = { "mdx", "javascript", "javascriptreact", "typescript", "typescriptreact" },
     config = function()
       require("nvim-ts-autotag").setup()
     end,
@@ -76,6 +76,17 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter",
+    branch = "main",
+    lazy = false,
+    build = ":TSUpdate",
     opts = require "configs.treesitter",
+    config = function(_, opts)
+      local ts = require "nvim-treesitter"
+
+      ts.setup {}
+      if opts.ensure_installed and #opts.ensure_installed > 0 then
+        ts.install(opts.ensure_installed)
+      end
+    end,
   },
 }

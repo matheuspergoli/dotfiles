@@ -27,7 +27,6 @@ return {
     css = { "biome-check", "prettierd", stop_after_first = true },
     scss = { "biome-check", "prettierd", stop_after_first = true },
     html = { "biome-check", "prettierd", stop_after_first = true },
-    astro = { "biome-check", "prettierd", stop_after_first = true },
 
     yaml = { "prettierd", stop_after_first = true },
     markdown = { "prettierd", stop_after_first = true },
