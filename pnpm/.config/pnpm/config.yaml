@@ -1,7 +1,5 @@
 minimumReleaseAge: 1440
 minimumReleaseAgeStrict: true
-minimumReleaseAgeExclude:
-  - '@draftlab/*'
 
 blockExoticSubdeps: true
 verifyDepsBeforeRun: false
